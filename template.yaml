@@ -1,0 +1,1343 @@
+  AddBatteryFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addbattery
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/add_components/add_battery
+      DockerTag: python3.8-v1
+
+  UpdateBatteryFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatebattery
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/update_components/update_battery
+      DockerTag: python3.8-v1
+
+  AddBatteryBoxFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addbatterybox
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/add_components/add_battery_box
+      DockerTag: python3.8-v1
+
+  UpdateBatteryBoxFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatebatterybox
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/update_components/update_battery_box
+      DockerTag: python3.8-v1
+
+  AddBmsFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addbms
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/add_components/add_bms
+      DockerTag: python3.8-v1
+
+  UpdateBmsFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatebms
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/update_components/update_bms
+      DockerTag: python3.8-v1
+
+  AddCellFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addcell
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/add_components/add_cell
+      DockerTag: python3.8-v1
+
+  UpdateCellFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatecell
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/update_components/update_cell
+      DockerTag: python3.8-v1
+
+  AddSignalConnectorFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addsignalconnector
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/add_components/add_signal_connector
+      DockerTag: python3.8-v1
+
+  UpdateSignalConnectorFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatesignalconnector
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./battery_assembly/update_components/update_signal_connector
+      DockerTag: python3.8-v1
+
+  AddBiwFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addbiw
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./biw/add_biw
+      DockerTag: python3.8-v1
+
+  UpdateBiwFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatebiw
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./biw/update_biw
+      DockerTag: python3.8-v1
+
+  AddBrakeSwitchFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addbrakeswitch
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./break_pedal_assembly/add_components/add_brake_switch
+      DockerTag: python3.8-v1
+
+  UpdateBrakeSwitchFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatebrakeswitch
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./break_pedal_assembly/update_components/update_brake_switch
+      DockerTag: python3.8-v1
+
+  AddReservoirFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addreservoir
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./break_pedal_assembly/add_components/add_reservoir
+      DockerTag: python3.8-v1
+
+  UpdateReservoirFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatereservoir
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./break_pedal_assembly/update_components/add_reservoir
+      DockerTag: python3.8-v1
+
+  AddTmcFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addtmc
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./break_pedal_assembly/add_components/add_tmc
+      DockerTag: python3.8-v1
+
+  UpdateTmcFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatetmc
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./break_pedal_assembly/update_components/update_tmc
+      DockerTag: python3.8-v1
+
+  AddArcReactorAssemblyFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addreactorassembly
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/add_components/add_arc_reactor_assembly
+      DockerTag: python3.8-v1
+
+  UpdateArcReactorAssemblyFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatereactorassembly
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/update_components/update_arc_reactor_assembly
+      DockerTag: python3.8-v1
+
+  AddAuxBatteryFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addauxbattery
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/add_components/add_aux_battery
+      DockerTag: python3.8-v1
+
+  UpdateAuxBatteryFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updateauxbattery
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/update_components/update_aux_battery
+      DockerTag: python3.8-v1
+
+  AddCocktailBoxFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addcocktailbox
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/add_components/add_cocktail_box
+      DockerTag: python3.8-v1
+
+  UpdateCocktailBoxFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatecocktailbox
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/update_components/update_cocktail_box
+      DockerTag: python3.8-v1
+
+  AddDcDcFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /adddcdc
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/add_components/add_dc_dc
+      DockerTag: python3.8-v1
+
+  UpdateDcDcFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatedcdc
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/update_components/update_dc_dc
+      DockerTag: python3.8-v1
+
+  AddMotorControllerFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addmotorcontroller
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/add_components/add_motor_controller
+      DockerTag: python3.8-v1
+
+  UpdateMotorControllerFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatemotorcontroller
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/update_components/update_motor_controller
+      DockerTag: python3.8-v1
+
+  AddOnBoardChargerFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addonboardcharger
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/add_components/add_on_board_charger
+      DockerTag: python3.8-v1
+
+  UpdateOnBoardChargerFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updateonboardcharger
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/update_components/update_on_board_charger
+      DockerTag: python3.8-v1
+
+  AddStarkFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addstark
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/add_components/add_stark
+      DockerTag: python3.8-v1
+
+  UpdateStarkFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatestark
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./cocketail_box_assembly/update_components/update_stark
+      DockerTag: python3.8-v1
+
+  AddCaliperFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addcaliper
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./disc_brake_assembly/add_components/add_caliper
+      DockerTag: python3.8-v1
+
+  UpdateCaliperFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatecaliper
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./disc_brake_assembly/update_components/update_caliper
+      DockerTag: python3.8-v1
+    
+  AddRotorFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addrotor
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./disc_brake_assembly/add_components/add_rotor
+      DockerTag: python3.8-v1
+
+  UpdateRotorFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updaterotor
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./disc_brake_assembly/update_components/update_rotor
+      DockerTag: python3.8-v1
+
+  AddCrownNutFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addcrownnut
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./driveshaft_assembly/add_components/add_crown_nut
+      DockerTag: python3.8-v1
+
+  UpdateCrownNutFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatecrownnut
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./driveshaft_assembly/update_components/update_crown_nut
+      DockerTag: python3.8-v1
+
+  AddRearAxleFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addrearaxle
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./driveshaft_assembly/add_components/add_rear_axle
+      DockerTag: python3.8-v1
+
+  UpdateRearAxleFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updaterearaxle
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./driveshaft_assembly/update_components/update_rear_axle
+      DockerTag: python3.8-v1
+
+  AddBottomLinkFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addbottomlink
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/add_components/add_bottom_link
+      DockerTag: python3.8-v1
+
+  UpdateBottomLinkFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatebottomlink
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/update_components/update_bottom_link
+      DockerTag: python3.8-v1
+
+  AddFork2BearingFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addfork2bearing
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/add_components/add_fork_2_bearing
+      DockerTag: python3.8-v1
+
+  UpdateFork2BearingFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatefork2bearing
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/update_components/update_fork_2_bearing
+      DockerTag: python3.8-v1
+
+  AddForkAndSuspensionSpringFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addforkandsuspensionspring
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/add_components/add_spring
+      DockerTag: python3.8-v1
+
+  UpdateForkAndSuspensionSpringFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updateforkandsuspensionspring
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/update_components/update_spring
+      DockerTag: python3.8-v1
+
+  AddForkAndSuspensionStrutFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addforkandsuspensionstrut
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/add_components/add_strut
+      DockerTag: python3.8-v1
+
+  UpdateForkAndSuspensionStrutFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updateforkandsuspensionstrut
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/update_components/update_strut
+      DockerTag: python3.8-v1
+
+
+  AddUpperAndLowerConeFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addupperandlowercone
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/add_components/add_upper_and_lower_cone
+      DockerTag: python3.8-v1
+
+  UpdateUpperAndLowerConeFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updateupperandlowercone
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./fork_and_suspension_assembly/update_components/update_upper_and_lower_cone
+      DockerTag: python3.8-v1
+
+
+  AddFrontRimFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addfrontrim
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./front_wheel_assembly/add_components/add_rim
+      DockerTag: python3.8-v1
+
+  UpdateFrontRimFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatefrontrim
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./front_wheel_assembly/update_components/update_rim
+      DockerTag: python3.8-v1
+
+
+  AddFrontTyreFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addfronttyre
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./front_wheel_assembly/add_components/add_tyre
+      DockerTag: python3.8-v1
+
+  UpdateFrontTyreFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatefronttyre
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./front_wheel_assembly/update_components/update_tyre
+      DockerTag: python3.8-v1
+
+
+  AddLoadBodyFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addloadbody
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./load_body/add_load_body
+      DockerTag: python3.8-v1
+
+  UpdateLoadBodyFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updateloadbody
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./load_body/update_load_body
+      DockerTag: python3.8-v1
+
+  AddMarkFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addmark
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./mark/add_mark
+      DockerTag: python3.8-v1
+
+  UpdateMarkFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatemark
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./mark/update_mark
+      DockerTag: python3.8-v1
+
+
+  AddMountingRubberFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addmountingrubber
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_suspension_assembly/add_components/add_mounting_rubber
+      DockerTag: python3.8-v1
+
+  UpdateMountingRubberFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatemountingrubber
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_suspension_assembly/update_components/update_mounting_rubber
+      DockerTag: python3.8-v1
+
+  AddRearSuspensionAssemblySpringFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addrearsuspensionassemblyspring
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_suspension_assembly/add_components/add_spring
+      DockerTag: python3.8-v1
+
+  UpdateRearSuspensionAssemblySpringFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updaterearsuspensionassemblyspring
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_suspension_assembly/update_components/update_spring
+      DockerTag: python3.8-v1
+
+
+
+  AddRearSuspensionAssemblyStrutFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addrearsuspensionassemblystrut
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_suspension_assembly/add_components/add_strut
+      DockerTag: python3.8-v1
+
+  UpdateRearSuspensionAssemblyStrutFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updaterearsuspensionassemblystrut
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_suspension_assembly/update_components/update_strut
+      DockerTag: python3.8-v1
+
+
+  AddRearRimFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addrearrim
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_wheel_assembly/add_componets/add_rim
+      DockerTag: python3.8-v1
+
+  UpdateRearRimFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updaterearrim
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_wheel_assembly/update_componets/update_rim
+      DockerTag: python3.8-v1
+
+
+  AddRearTyreFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addreartyre
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_wheel_assembly/add_componets/add_tyre
+      DockerTag: python3.8-v1
+
+  UpdateRearWheelAssemblyTyreFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatereartyre
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./rear_wheel_assembly/update_componets/update_tyre
+      DockerTag: python3.8-v1
+
+
+  AddBrakePlateFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addbrakeplate
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./semi_sprung_assembly/add_components/add_brake_plate
+      DockerTag: python3.8-v1
+
+  UpdateBrakePlateFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatebrakeplate
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./semi_sprung_assembly/update_components/update_brake_plate
+      DockerTag: python3.8-v1
+
+
+  AddDrumFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /adddrum
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./semi_sprung_assembly/add_components/add_drum
+      DockerTag: python3.8-v1
+
+  UpdateDrumFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatedrum
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./semi_sprung_assembly/update_components/update_drum
+      DockerTag: python3.8-v1
+
+
+  AddHubAssemblyFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addhubassembly
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./semi_sprung_assembly/add_components/add_hub_assembly
+      DockerTag: python3.8-v1
+
+  UpdateHubAssemblyFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatehubassembly
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./semi_sprung_assembly/update_components/update_hub_assembly
+      DockerTag: python3.8-v1
+
+
+  AddTrailingArmFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addtrailingarm
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./semi_sprung_assembly/add_components/add_trailing_arm
+      DockerTag: python3.8-v1
+
+  UpdateTrailingArmFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatetrailingarm
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./semi_sprung_assembly/update_components/update_trailing_arm
+      DockerTag: python3.8-v1
+
+
+  AddTelematicsFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addtelematics
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./telematics/add_telematics
+      DockerTag: python3.8-v1
+
+  UpdateTelematicsFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updatetelematics
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./telematics/update_telematics
+      DockerTag: python3.8-v1  
+      
+
+
+
